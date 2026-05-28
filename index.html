@@ -1,107 +1,246 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | lava floor</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-  </head>
-  <body>
-    <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600></canvas>
-      <div id="unity-loading-bar">
-        <div id="unity-logo"></div>
-        <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full"></div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xiaoying Wang</title>
+  <style>
+    body {
+      margin: 0;
+      background: #fff;
+      color: #222;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    a {
+      color: #0645ad;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 34px 24px 48px;
+    }
+
+    nav {
+      margin-bottom: 28px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+      font-size: 15px;
+    }
+
+    nav a {
+      margin-right: 18px;
+      color: #333;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .portrait {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border: 1px solid #ddd;
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .name-cn {
+      margin-bottom: 12px;
+      color: #555;
+      font-size: 18px;
+    }
+
+    .role {
+      margin: 0 0 12px;
+    }
+
+    .links {
+      margin-top: 12px;
+      font-size: 15px;
+    }
+
+    .links a {
+      margin-right: 12px;
+    }
+
+    section {
+      margin-top: 34px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #ddd;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    .publication {
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      gap: 18px;
+      align-items: start;
+      margin-bottom: 24px;
+    }
+
+    .pub-image {
+      width: 210px;
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #e5e5e5;
+      display: block;
+    }
+
+    .pub-details {
+      min-width: 0;
+    }
+
+    .pub-title {
+      font-weight: 600;
+    }
+
+    .pub-authors,
+    .pub-venue {
+      color: #444;
+    }
+
+    .pub-links {
+      font-size: 15px;
+    }
+
+    .education-item {
+      margin-bottom: 12px;
+    }
+
+    .degree {
+      font-weight: 600;
+    }
+
+    footer {
+      margin-top: 42px;
+      padding-top: 12px;
+      border-top: 1px solid #ddd;
+      color: #666;
+      font-size: 14px;
+    }
+
+    @media (max-width: 680px) {
+      .page {
+        padding: 24px 18px 40px;
+      }
+
+      .intro {
+        grid-template-columns: 1fr;
+      }
+
+      .portrait {
+        width: 150px;
+        height: 150px;
+      }
+
+      .publication {
+        grid-template-columns: 1fr;
+      }
+
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <nav>
+      <a href="#research">Research</a>
+      <a href="#education">Education</a>
+    </nav>
+
+    <header class="intro">
+      <img class="portrait" src="avatar_v6.jpg" alt="Xiaoying Wang">
+      <div>
+        <h1>Xiaoying Wang</h1>
+        <div class="name-cn">王筱盈</div>
+        <p class="role">
+          Research Assistant at the
+          <a href="https://www.math.ucla.edu/aivc/" target="_blank">UCLA Artificial Intelligence &amp; Visual Computing (AIVC) Lab</a>,
+          directed by <a href="https://www.math.ucla.edu/~cffjiang/" target="_blank">Prof. Chenfanfu Jiang</a>
+          and supervised by <a href="https://yingjiang96.github.io/" target="_blank">Ying Jiang</a>.
+        </p>
+        <p>
+          My research interests include computer vision and generative AI, with a focus on
+          2D/3D content generation, geometry deformation, and depth estimation.
+        </p>
+        <div class="links">
+          <a href="mailto:delluluwxy@gmail.com">Email</a>
         </div>
       </div>
-      <div id="unity-warning"> </div>
-      <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">lava floor</div>
+    </header>
+
+    <section id="research">
+      <h2>Research</h2>
+      <div class="publication">
+        <img class="pub-image" src="fishbone.png" alt="Fishbone visual examples">
+        <div class="pub-details">
+          <div class="pub-title">Fishbone: From One 3D Asset to a Million Controllable Edits</div>
+          <div class="pub-authors">
+            Yumeng He, <strong>Xiaoying Wang</strong>, Peihao Li, Yanjia Huang, Joe Masterjohn, Jiajun Wu, Leonidas Guibas, Yin Yang, Ying Jiang, Chenfanfu Jiang
+          </div>
+          <div class="pub-venue">arXiv, 2026.</div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2605.24805" target="_blank">[Paper]</a>
+          </div>
+        </div>
       </div>
-    </div>
-    <script>
-      var container = document.querySelector("#unity-container");
-      var canvas = document.querySelector("#unity-canvas");
-      var loadingBar = document.querySelector("#unity-loading-bar");
-      var progressBarFull = document.querySelector("#unity-progress-bar-full");
-      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-      var warningBanner = document.querySelector("#unity-warning");
+      <div class="publication">
+        <img class="pub-image" src="seeclear.png" alt="SeeClear transparent object depth estimation examples">
+        <div class="pub-details">
+          <div class="pub-title">SeeClear: Reliable Transparent Object Depth Estimation via Generative Opacification</div>
+          <div class="pub-authors">
+            <strong>Xiaoying Wang</strong>*, Yumeng He*, Jingkai Shi*, Jiayin Lu, Yin Yang, Ying Jiang, Chenfanfu Jiang
+          </div>
+          <div class="pub-venue">arXiv, 2026. * Equal contribution.</div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2603.19547" target="_blank">[Paper]</a>
+            <a href="https://heyumeng.com/SeeClear-web/" target="_blank">[Project Page]</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      // Shows a temporary message banner/ribbon for a few seconds, or
-      // a permanent error message on top of the canvas if type=='error'.
-      // If type=='warning', a yellow highlight color is used.
-      // Modify or remove this function to customize the visually presented
-      // way that non-critical warnings and error messages are presented to the
-      // user.
-      function unityShowBanner(msg, type) {
-        function updateBannerVisibility() {
-          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
-        }
-        var div = document.createElement('div');
-        div.innerHTML = msg;
-        warningBanner.appendChild(div);
-        if (type == 'error') div.style = 'background: red; padding: 10px;';
-        else {
-          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-          setTimeout(function() {
-            warningBanner.removeChild(div);
-            updateBannerVisibility();
-          }, 5000);
-        }
-        updateBannerVisibility();
-      }
+    <section id="education">
+      <h2>Education</h2>
+      <div class="education-item">
+        <div class="degree">M.S. Multimedia and Creative Technologies</div>
+        <div>University of Southern California, Jan. 2024 - Dec. 2025</div>
+      </div>
+      <div class="education-item">
+        <div class="degree">B.Sc. Computer Science (Artificial Intelligence)</div>
+        <div>University of Nottingham Ningbo China, 2019 - 2023</div>
+      </div>
+    </section>
 
-      var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/WebGL builds.loader.js";
-      var config = {
-        dataUrl: buildUrl + "/WebGL builds.data",
-        frameworkUrl: buildUrl + "/WebGL builds.framework.js",
-        codeUrl: buildUrl + "/WebGL builds.wasm",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "lava floor",
-        productVersion: "0.1",
-        showBanner: unityShowBanner,
-      };
-
-      // By default Unity keeps WebGL canvas render target size matched with
-      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
-      // Set this to false if you want to decouple this synchronization from
-      // happening inside the engine, and you would instead like to size up
-      // the canvas DOM size and WebGL render target sizes yourself.
-      // config.matchWebGLToCanvasSize = false;
-
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        container.className = "unity-mobile";
-        // Avoid draining fillrate performance on mobile devices,
-        // and default/override low DPI mode on mobile browsers.
-        config.devicePixelRatio = 1;
-        unityShowBanner('WebGL builds are not supported on mobile devices.');
-      } else {
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
-      }
-      loadingBar.style.display = "block";
-
-      var script = document.createElement("script");
-      script.src = loaderUrl;
-      script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-          progressBarFull.style.width = 100 * progress + "%";
-        }).then((unityInstance) => {
-          loadingBar.style.display = "none";
-          fullscreenButton.onclick = () => {
-            unityInstance.SetFullscreen(1);
-          };
-        }).catch((message) => {
-          alert(message);
-        });
-      };
-      document.body.appendChild(script);
-    </script>
-  </body>
+    <footer>
+      Last updated: April 2026
+    </footer>
+  </main>
+</body>
 </html>
